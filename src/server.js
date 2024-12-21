@@ -10,7 +10,7 @@ import router from './routers/index.js';
 
 const corsOptions = {
   origin: [
-    'https://project-aqua-track-front.vercel.app',
+    'https://coursework-aqua-tracker-frontend.vercel.app/',
     'http://localhost:5173',
   ],
   credentials: true,

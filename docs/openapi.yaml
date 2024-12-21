@@ -13,7 +13,7 @@ tags:
   - name: Water
     description: Operations about water.
 servers:
-  - url: https://project-aquatrack-back.onrender.com
+  - url: https://coursework-aquatracker-backend.onrender.com
 paths:
   /users/login:
     post:

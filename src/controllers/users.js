@@ -22,7 +22,7 @@ export const googleAuth = async (req, res, next) => {
   const stringifiedParams = queryString.stringify({
     client_id: process.env.GOOGLE_CLIENT_ID,
     redirect_uri:
-      'https://project-aquatrack-back.onrender.com/users/google-redirect',
+      'https://coursework-aquatracker-backend.onrender.com/users/google-redirect',
     scope: [
       'https://www.googleapis.com/auth/userinfo.email',
       'https://www.googleapis.com/auth/userinfo.profile',
@@ -31,6 +31,7 @@ export const googleAuth = async (req, res, next) => {
     access_type: 'offline',
     prompt: 'consent',
   });
+
   return res.redirect(
     `https://accounts.google.com/o/oauth2/v2/auth?${stringifiedParams}`,
   );
@@ -51,7 +52,7 @@ export const googleRedirect = async (req, res, next) => {
       client_id: process.env.GOOGLE_CLIENT_ID,
       client_secret: process.env.GOOGLE_CLIENT_SECRET,
       redirect_uri:
-        'https://project-aquatrack-back.onrender.com/users/google-redirect',
+        'https://coursework-aquatracker-backend.onrender.com/users/google-redirect',
       grant_type: 'authorization_code',
       code,
     }),
